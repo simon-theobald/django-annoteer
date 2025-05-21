@@ -9,6 +9,7 @@ class Annotation(models.Model):
         (2, "Annotated"),
         (3, "Finished Annotation")
     ]
+    
     text = models.TextField(blank=True)
     status = models.PositiveIntegerField(choices=STATUS_CHOICES, default=1)
     finished_annotation = forms.ChoiceField(choices=("Ja", "Nein"))
