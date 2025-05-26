@@ -1,7 +1,3 @@
-from django.shortcuts import render
-# annotation/views.py
-from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
-from django.urls import reverse_lazy
 from django.shortcuts import render, get_object_or_404, redirect
 
 from .models import Annotation
@@ -45,4 +41,3 @@ def annotation_delete(request, pk):
         annotation.delete()
         return redirect("annotation:annotation_list")
     return render(request, "annotation/annotation_delete.html", {"annotation": annotation})
-
