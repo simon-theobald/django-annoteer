@@ -2,6 +2,8 @@ from django.db import models
 from django.contrib.auth.models import User
 from django import forms
 
+
+   
 class Annotation(models.Model):
     STATUS_CHOICES = [
         (1, 'Unannotated'),
@@ -15,11 +17,6 @@ class Annotation(models.Model):
     save_finished_annotation = models.BooleanField(default=False)
     last_modified_by= models.ForeignKey(User, on_delete=models.CASCADE, related_name='last_modifiede_by')
     last_modified_at = models.DateTimeField(auto_now_add=True)
-
-
-
-
-
 
 
 
