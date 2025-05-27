@@ -1,0 +1,6 @@
+<h1>{{ project.name }}</h1>
+<p>{{ project.description }}</p>
+<p>Created by: {{ project.created_by }}</p>
+<a href="{% url 'projects:project_update' project.pk %}">Edit</a> |
+<a href="{% url 'projects:project_delete' project.pk %}">Delete</a> |
+<a href="{% url 'projects:project_list' %}">Back</a>
