@@ -3,4 +3,3 @@ from .models import Dataitem
 
 # Register your models here.
 admin.site.register(Dataitem)
-from django.contrib import admin

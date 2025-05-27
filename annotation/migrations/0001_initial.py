@@ -1,8 +1,6 @@
 import django.db.models.deletion
 from django.conf import settings
 from django.db import migrations, models
-import django.db.models.deletion
-
 
 
 class Migration(migrations.Migration):
@@ -15,14 +13,6 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.CreateModel(
-            name='Annotation',
-            fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('text', models.TextField(blank=True)),
-                ('status', models.PositiveIntegerField(choices=[(1, 'Unannotated'), (2, 'Annotated'), (3, 'Finished Annotation')], default=1)),
-                ('save_finished_annotation', models.BooleanField(default=False)),
-                ('last_annotated_at', models.DateTimeField(auto_now_add=True)),
-            name='Annotate',
             name="Annotation",
             fields=[
                 (
@@ -34,7 +24,7 @@ class Migration(migrations.Migration):
                         verbose_name="ID",
                     ),
                 ),
-                ("text", models.TextField()),
+                ("text", models.TextField(blank=True)),
                 (
                     "status",
                     models.PositiveSmallIntegerField(
