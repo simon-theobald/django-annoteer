@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'projects',
     'dataitem',
 ]
-
+#hallo
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
