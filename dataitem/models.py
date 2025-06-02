@@ -1,12 +1,10 @@
 from django.contrib.auth.models import User
 from django.db import models
 from django.contrib.auth.models import User
-from projects.models import Project
 
 
 # Create your models here.
 class Dataitem(models.Model):
-
     name = models.CharField(max_length=3)
     description = models.TextField(blank=True)
     created_at = models.DateTimeField(auto_now_add=True)

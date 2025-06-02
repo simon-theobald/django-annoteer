@@ -22,3 +22,4 @@ urlpatterns = [
     path('projects/', include('projects.urls')),
     path('dataitem/', include('dataitem.urls')),
 ]
+
