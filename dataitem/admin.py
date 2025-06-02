@@ -1,8 +1,6 @@
 from django.contrib import admin
+from dataitem.models import Dataitem
 
 # Register your models here.
-from django.contrib import admin
+admin.site.register(Dataitem)
 
-from annotation.models import Annotation
-
-admin.site.register(Annotation)
