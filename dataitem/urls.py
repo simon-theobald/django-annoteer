@@ -16,4 +16,3 @@ urlpatterns = [
     path("<int:pk>/update/", dataitem_update, name="dataitem_update"),
     path("<int:pk>/delete/", dataitem_delete, name="dataitem_delete"),
 ]
-
