@@ -42,7 +42,7 @@
         </a>
 
         {# If you have a DataitemCreateView that accepts a project pk, you could do: #}
-        <a href="{% url 'dataitems:dataitem_create' project.pk %}"
+        <a href="{% url 'dataitems:dataitem_create' %}"
            class="btn btn-sm btn-primary ms-auto">
           <i class="bi bi-plus-lg"></i> New Data Item
         </a>
@@ -104,8 +104,7 @@
       {% else %}
         <div class="alert alert-info">
           No Data Items found for this project.
-          {% comment %}If you didn’t include a “New Data Item” button above, you could add a link here:{% endcomment %}
-          <a href="{% url 'dataitems:dataitem_create' project.pk %}" class="alert-link">
+          <a href="{% url 'dataitems:dataitem_create' %}" class="alert-link">
             Create one now.
           </a>
         </div>
