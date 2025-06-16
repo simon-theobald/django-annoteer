@@ -40,4 +40,4 @@ def annotation_delete(request, pk):
     if request.method == "POST":
         annotation.delete()
         return redirect("annotation:annotation_list")
-    return render(request, "annotation/annotation_delete.html", {"annotation": annotation})
+    return render(request, "annotation/annotation_confirm_delete.html", {"annotation": annotation})
