@@ -2,7 +2,8 @@
 <ul>
   {% for annotation in annotations %}
     <li>
-      <a href="{% url 'annotation:annotation_detail' annotation.pk %}">{{ annotation.label }}</a>
+      <a href="{% url 'annotation:annotation_detail' annotation.pk %}">{{ annotation.text }}</a>
+      - Status: {{ annotation.get_status_display }}
     </li>
   {% endfor %}
 </ul>
