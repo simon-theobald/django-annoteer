@@ -5,4 +5,4 @@ from .models import Annotation
 class AnnotationForm(forms.ModelForm):
     class Meta:
         model = Annotation
-        fields = ["label", "description"]
+        fields = ["text", "status", "finished_annotations"]
