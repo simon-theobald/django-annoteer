@@ -1,18 +1,18 @@
 from django.urls import path
-from .views import (
-    dataitem_list,
-    dataitem_detail,
-    dataitem_create,
-    dataitem_update,
-    dataitem_delete,
-)
-
-app_name = "dataitems"
+from . import views
 
 urlpatterns = [
-    path("", dataitem_list, name="dataitem_list"),
-    path("<int:pk>/", dataitem_detail, name="dataitem_detail"),
-    path("create/", dataitem_create, name="dataitem_create"),
-    path("<int:pk>/update/", dataitem_update, name="dataitem_update"),
-    path("<int:pk>/delete/", dataitem_delete, name="dataitem_delete"),
+    path('', views.dataitem_list, name='dataitem_list'),
+    path('dataitem/new', views.dataitem_create, name='dataitem_create'),
+    path('dataitem/<int:pk>/edit/', views.dataitem_update, name='dataitem_update'),
+    path('dataitem/<int:pk>/delete/', views.dataitem_delete, name='dataitem_delete'),
+]
+
+
+from django.contrib import admin
+from django.urls import path, include  # include importieren
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('dataitems/', include('dataitems.urls')),  # Pfad zu den URLs Ihrer App
 ]
